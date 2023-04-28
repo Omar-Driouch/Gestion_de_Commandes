@@ -7,25 +7,10 @@
     android:orientation="vertical"
     tools:context=".AjouternouvelleCommande">
 
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/black"
-        android:elevation="42dp"
-        android:titleTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Toolbar Title"
-        app:titleTextColor="@android:color/white"
-        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/framelayout0"
-        android:layout_width="@+id/toolbar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#1976D2"
         android:gravity="center_horizontal"
@@ -33,7 +18,7 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/editsubtitle"
@@ -102,7 +87,7 @@
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="209dp"
         android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="numberDecimal"
@@ -124,34 +109,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="56dp"
-        android:text="Date Time"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <EditText
-        android:id="@+id/datetime"
-        android:layout_width="209dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
 
-        android:inputType="datetime"
-        android:maxLength="30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-        tools:ignore="MissingConstraints" />
+
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/ajouteer"
         android:layout_width="352dp"
         android:layout_height="60dp"
         android:text="Ajouter"

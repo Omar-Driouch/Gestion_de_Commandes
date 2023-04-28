@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestion_Commandes">
         <activity
+            android:name=".showdata"
+            android:exported="false" />
+        <activity
             android:name=".AjouternouvelleCommande"
             android:exported="true" />
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
