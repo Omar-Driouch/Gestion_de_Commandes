@@ -44,17 +44,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_Qunity, Quantite);
 
 
-        // Inserting Row
-        long result = db.insert(TABLE_NAME, null, values);
-        db.close(); // Closing database connection
 
-        // check if data is saved to database
+        long result = db.insert(TABLE_NAME, null, values);
+        db.close();
+
+
         if (result == -1) {
-            // data is not saved to database
+
             Log.e("Database", "Error inserting data into " + TABLE_NAME);
             return false;
         } else {
-            // data is saved to database
+
             return true;
         }
 
@@ -68,21 +68,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public List<String> getAllCommandes() {
             List<String> commandes = new ArrayList<String>();
 
-            // Select All Query
+
             String selectQuery = "SELECT * FROM " + TABLE_NAME;
 
             SQLiteDatabase db = this.getWritableDatabase();
             Cursor cursor = db.rawQuery(selectQuery, null);
 
-            // looping through all rows and adding to list
             if (cursor.moveToFirst()) {
                 do {
                     String id = cursor.getString(0);
                     String nom = cursor.getString(1);
                     String quantite = cursor.getString(2);
-                   // String date = cursor.getString(3);
 
-                    // Adding command to list
+
+
                     commandes.add(id + "," + nom + "," + quantite );
                 } while (cursor.moveToNext());
             }
@@ -105,34 +104,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public Cursor AFFICHER_STATE() {
-        SQLiteDatabase sqlDb = this.getWritableDatabase();
-        String query = "SELECT * FROM "+TABLE_NAME ;
-        Cursor row = sqlDb.rawQuery(query, null);
-        if (row == null) {
-            row.moveToFirst();
-        }
-        return row;
-    }
 
 
-    public   Cursor AFFICHERRESTOREDDATA()
-    {
-        SQLiteDatabase sqlDb = this.getWritableDatabase();
-        String query = "SELECT * FROM "+TABLE_NAME;
-        Cursor row = sqlDb.rawQuery(query, null);
-        if (row == null) {
-            row.moveToFirst();
-        }
-        return row;
-    }
 
-
-    public   String Testtt()
-    {
-
-        return "row";
-    }
 
 
 
