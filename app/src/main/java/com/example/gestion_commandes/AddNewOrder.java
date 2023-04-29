@@ -2,7 +2,6 @@ package com.example.gestion_commandes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,13 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AjouternouvelleCommande extends AppCompatActivity {
+public class AddNewOrder extends AppCompatActivity {
    // public static  DatabaseHelper mydatabase;
     private  com.example.gestion_commandes.DatabaseHelper mydatabase;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ajouternouvelle_commande);
+        setContentView(R.layout.addneworder);
 
 
 
@@ -27,7 +26,7 @@ public class AjouternouvelleCommande extends AppCompatActivity {
 
         EditText editTextQuntity = findViewById(R.id.editTextTextPersonName4);
 
-        Button AddnewCommnd = findViewById(R.id.ajouteer);
+        Button AddnewCommnd = findViewById(R.id.Addneworder);
 
         mydatabase = new DatabaseHelper(this);
         AddnewCommnd.setOnClickListener(new View.OnClickListener() {
@@ -57,10 +56,13 @@ public class AjouternouvelleCommande extends AppCompatActivity {
              boolean isinserted =   mydatabase.addCommande(Integer.parseInt(num), name, quantity  );
               if(isinserted)
               {
-                  Toast.makeText(AjouternouvelleCommande.this, "Data is inserted", Toast.LENGTH_SHORT).show();
+                  editTextnum.setText("");
+                  editTextName.setText("");
+                  editTextQuntity.setText("");
+                  Toast.makeText(AddNewOrder.this, "Data is inserted", Toast.LENGTH_SHORT).show();
               }
               else {
-                  Toast.makeText(AjouternouvelleCommande.this, "Somethinwent", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(AddNewOrder.this, "Something went wrong", Toast.LENGTH_SHORT).show();
 
               }
             }
@@ -73,4 +75,7 @@ public class AjouternouvelleCommande extends AppCompatActivity {
 
 
     }
+
+
+
 }

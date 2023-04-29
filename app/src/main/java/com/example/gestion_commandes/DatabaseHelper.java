@@ -83,7 +83,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                    // String date = cursor.getString(3);
 
                     // Adding command to list
-                    commandes.add("ID: " + id + ", Nom: " + nom + ", Quantite: " + quantite );
+                    commandes.add(id + "," + nom + "," + quantite );
                 } while (cursor.moveToNext());
             }
 

@@ -6,11 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private Button Ajouterunenouvellcommand;
-    private Button Consulterlescommand;
+    private Button addneworder;
+    private Button orders;
     private Intent intent;
     private Intent intent2;
     @Override
@@ -18,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Ajouterunenouvellcommand = findViewById(R.id.Ajouternouvellecomand);
-        Consulterlescommand = findViewById(R.id.Consulterlescommandes);
-        intent =   new Intent(this,AjouternouvelleCommande.class);
-        Ajouterunenouvellcommand.setOnClickListener(new View.OnClickListener() {
+        addneworder = findViewById(R.id.AddNewOrders);
+        orders = findViewById(R.id.orders);
+        intent =   new Intent(this, AddNewOrder.class);
+        addneworder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         intent2 =   new Intent(this,showdata.class);
-        Consulterlescommand.setOnClickListener(new View.OnClickListener() {
+        orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

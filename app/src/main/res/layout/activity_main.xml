@@ -7,23 +7,23 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/Ajouternouvellecomand"
+        android:id="@+id/AddNewOrders"
         android:layout_width="318dp"
         android:layout_height="93dp"
         android:layout_marginTop="224dp"
-        android:text="Ajouter une nouvelle Commande"
+        android:text="Add new orders  "
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/Consulterlescommandes"
+        app:layout_constraintBottom_toTopOf="@+id/orders"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Consulterlescommandes"
+        android:id="@+id/orders"
         android:layout_width="318dp"
         android:layout_height="93dp"
-        android:text="Consulter les commandes"
+        android:text="all orders"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

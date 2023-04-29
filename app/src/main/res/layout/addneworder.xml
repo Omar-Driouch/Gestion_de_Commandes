@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AjouternouvelleCommande">
+    tools:context=".AddNewOrder">
 
 
     <LinearLayout
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Ajouter une nouvelle commande"
+            android:text="Add new order"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Num de commande"
+        android:text="Order's ID"
         android:textSize="18dp"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintHorizontal_bias="0.142"
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="Nom de commande"
+        android:text="Oder's Name"
         android:textSize="18dp"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
         app:layout_constraintHorizontal_bias="0.115"
@@ -114,10 +114,10 @@
 
 
     <Button
-        android:id="@+id/ajouteer"
+        android:id="@+id/Addneworder"
         android:layout_width="352dp"
         android:layout_height="60dp"
-        android:text="Ajouter"
+        android:text="Add an order"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -40,33 +40,61 @@ public class showdata extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                List<String> Mydata = mydatabase.getAllCommandes();
 
-           List<String>     Mydata =    mydatabase.getAllCommandes();
+                if (position >= Mydata.size() - 1) {
+                    position = 0;
+                } else {
+                    position++;
+                }
 
+                try {
+                    String[] parts = Mydata.get(position).split(",");
+                    String id = parts[0].trim();
+                    String name = parts[1].trim();
+                    String quantite = parts[2].trim();
 
-                    if (position>=Mydata.size())return;
-                        String[] parts = Mydata.get(position).split(",");
-                        String id =   parts[0].trim() ;
-                        String nom = parts[1].trim();
-                        String quantite =  parts[2].trim() ;
-
-
-                        Commandid.setText(id);
-                        Commandname.setText(nom);
-                        CommandQuantity.setText(quantite);
-
-
-
-                position++;
-
-
-
-
+                    Commandid.setText(id);
+                    Commandname.setText(name);
+                    CommandQuantity.setText(quantite);
+                } catch (Exception e) {
+                    Toast.makeText(showdata.this, e.toString() + "  " + position, Toast.LENGTH_SHORT).show();
+                }
             }
+
         });
 
 
+        Previois.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<String> Mydata = mydatabase.getAllCommandes();
 
+                if (position == 0) {
+                    position = Mydata.size() - 1;
+                } else {
+                    position--;
+                }
+
+                if (position <= -1) {
+                    position = Mydata.size() - 1;
+                }
+
+                try {
+                    String[] parts = Mydata.get(position).split(",");
+                    String id = parts[0].trim();
+                    String nom = parts[1].trim();
+                    String quantite = parts[2].trim();
+
+                    Commandid.setText(id);
+                    Commandname.setText(nom);
+                    CommandQuantity.setText(quantite);
+                } catch (Exception e) {
+                    Toast.makeText(showdata.this, e.toString() + "  " + position, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
 
 
 
